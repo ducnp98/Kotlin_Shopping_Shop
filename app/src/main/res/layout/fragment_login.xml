@@ -56,7 +56,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txt_register"
         style="@style/h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline_end"
         app:layout_constraintStart_toStartOf="@+id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_register" />
 
     <EditText
         android:id="@+id/et_password"

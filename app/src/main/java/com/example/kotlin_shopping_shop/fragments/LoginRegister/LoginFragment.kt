@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.kotlin_shopping_shop.databinding.FragmentAccountOptionBinding
-import com.example.kotlin_shopping_shop.databinding.FragmentIntroductionBinding
+import androidx.navigation.fragment.findNavController
+import com.example.kotlin_shopping_shop.R
 import com.example.kotlin_shopping_shop.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -22,5 +22,17 @@ class LoginFragment : Fragment() {
     ): View? {
         binding = FragmentLoginBinding.inflate(layoutInflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        onNavigateToRegister()
+    }
+
+    private fun onNavigateToRegister() {
+        binding.txtRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
     }
 }
