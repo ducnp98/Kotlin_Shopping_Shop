@@ -57,13 +57,13 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txt_login_suggest"
         style="@style/h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Don't have a account? Register"
+        android:text="Do you have a account? Login"
         app:layout_constraintStart_toStartOf="@+id/guideline_start"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -79,7 +79,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline_end"
         app:layout_constraintStart_toStartOf="@+id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_login_suggest" />
 
     <EditText
         android:id="@+id/et_last_name"

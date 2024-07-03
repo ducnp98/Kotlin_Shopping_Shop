@@ -7,11 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.kotlin_shopping_shop.R
-import com.example.kotlin_shopping_shop.ShoppingShopApplication
 import com.example.kotlin_shopping_shop.data.User
 import com.example.kotlin_shopping_shop.databinding.FragmentRegisterBinding
-import com.example.kotlin_shopping_shop.di.AppModule
 import com.example.kotlin_shopping_shop.utils.RegisterValidation
 import com.example.kotlin_shopping_shop.utils.Resource
 import com.example.kotlin_shopping_shop.viewModel.RegisterViewModel
@@ -40,6 +39,13 @@ class RegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         onRegister()
+        onNavigateToLogin()
+    }
+
+    private fun onNavigateToLogin() {
+        binding.txtLoginSuggest.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+        }
     }
 
     private fun onRegister() {
