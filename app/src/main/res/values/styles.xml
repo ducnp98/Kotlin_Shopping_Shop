@@ -43,6 +43,16 @@
         <item name="android:fontFamily">@font/poppins_light</item>
     </style>
 
+    <style name="editTextSearch">
+        <item name="android:background">@drawable/round_background</item>
+        <item name="android:gravity">start|center</item>
+        <item name="singleLine">true</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColorHint">@color/g_gray400</item>
+        <item name="android:fontFamily">@font/poppins_thin</item>
+    </style>
+
 
     <dimen name="h4TextSize">35sp</dimen>
     <dimen name="h2TextSize">17sp</dimen>
